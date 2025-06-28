@@ -1,0 +1,115 @@
+.calculator-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .calculator-form {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-group input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .interest-type {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .interest-type label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 1rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #45a049;
+  }
+  
+  .result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #e8f5e9;
+    border-radius: 8px;
+  }
+  
+  .result h3 {
+    margin-top: 0;
+    color: #2e7d32;
+  }
+  
+  .result p {
+    margin: 0.5rem 0;
+  }
+  
+  .result strong {
+    font-size: 1.2rem;
+    color: #1b5e20;
+  }
+  .interest-toggle {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+  }
+  
+  .interest-toggle label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 15px;
+  }
+  
+  .result-grid div:nth-child(odd) {
+    font-weight: bold;
+  }
+  
+  .total-label {
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+    padding-top: 8px;
+  }
+  
+  .total-amount {
+    font-weight: bold;
+    font-size: 1.1em;
+    border-top: 1px solid #ddd;
+    padding-top: 8px;
+  }

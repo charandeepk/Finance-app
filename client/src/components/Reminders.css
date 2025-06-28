@@ -1,0 +1,46 @@
+.reminders-container {
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.deadline-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.deadline-card {
+  border-radius: 12px;
+  padding: 16px;
+  width: 260px;
+  background-color: #f4f4f4;
+  border: 2px solid #ddd;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.deadline-card.overdue {
+  background-color: #ffe5e5;
+  border-color: #ff4d4d;
+}
+
+.deadline-card.due-soon {
+  background-color: #fffbd5;
+  border-color: #ffcc00;
+}
+
+.deadline-card h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+.deadline-card p {
+  margin: 4px 0;
+  font-size: 14px;
+}

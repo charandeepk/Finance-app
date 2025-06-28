@@ -1,0 +1,129 @@
+.clients-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .clients-header {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .add-client-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .large-font {
+    font-size: 1.1rem;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  
+  .add-button {
+    grid-column: 1 / -1;
+    padding: 14px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-button:hover {
+    background-color: #218838;
+  }
+  
+  .client-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .client-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .client-card h3 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #222;
+  }
+  
+  .client-card p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #555;
+  }
+  
+  .overdue-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff3cd;
+    border-radius: 10px;
+  }
+  
+  .overdue-header {
+    font-size: 1.5rem;
+    color: #856404;
+    margin-top: 0;
+  }
+  
+  .client-card.overdue {
+    border-left: 4px solid #dc3545;
+    background-color: #f8d7da;
+  }
+  
+  .remove-button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .remove-button:hover {
+    background-color: #c82333;
+  }
+  
+  .current-loans-section {
+    margin-top: 30px;
+  }
+  
+  .current-loans-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
