@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Clients.css';
 
-
 const API_BASE = process.env.REACT_APP_API_URL || 'https://finance-app-backend-h4ee.onrender.com';
 
 function Clients() {
@@ -11,6 +10,8 @@ function Clients() {
   const [date, setDate] = useState('');
   const [overdueClients, setOverdueClients] = useState([]);
   const [error, setError] = useState('');
+  const [showTotal, setShowTotal] = useState(false);
+  const [totalAmount, setTotalAmount] = useState(0);
 
   const fetchClients = async () => {
     try {
@@ -44,6 +45,11 @@ function Clients() {
       return !isNaN(loanDate) && loanDate < oneYearAgo;
     });
     setOverdueClients(overdue);
+  }, [clients]);
+
+  useEffect(() => {
+    const total = clients.reduce((sum, client) => sum + Number(client.amount || 0), 0);
+    setTotalAmount(total);
   }, [clients]);
 
   const addClient = async () => {
@@ -85,6 +91,16 @@ function Clients() {
   return (
     <div className="clients-container">
       <h2 className="clients-header">Client Management</h2>
+
+      {/* Stylish Toggle Box for Total Amount */}
+      <div
+        className="total-box"
+        onClick={() => setShowTotal(!showTotal)}
+      >
+        {showTotal
+          ? `💰 Total Loaned: ₹${totalAmount}`
+          : '🔍 Click to View Total Borrowed Amount'}
+      </div>
 
       <div className="add-client-form">
         <div className="form-group">
